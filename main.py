@@ -3,11 +3,10 @@ from scapy.all import *
 
 try:
     host = input("Enter a host address:")
-    p = list(input("Enter the ports to scan:").split(",")) #Split is the method that converts strings into list
-    temp = map(int,p) #to enter the ports in the integer instead of strings
+    p = list(input("Enter the ports to scan:").split(",")) 
+    temp = map(int,p) 
     ports = list(temp)
-
-    if(re.match(r"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$",host)): #regex -> characters into a fix pattern
+    if(re.match(r"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$",host)): 
         print("\n\nScanning...")
         print("Host: ", host)
         print("Ports: ",ports)
